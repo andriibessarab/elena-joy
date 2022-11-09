@@ -23,14 +23,14 @@
 
 
 html{
-    font-size: 40%;
+    font-size: 67.5%;
     scroll-behavior: smooth;
     --header1: calc(2rem + 1vw);
     --header2: calc(3.5rem + 1vw);
     --header3: calc(3rem + 1vw);
     --header4: calc(2.4rem + 1vw);
     --text: calc(1.5rem + 1vw);
-    --big-text: calc(2.45rem + 1vw);
+    --big-text: calc(6rem + 1vw);
     --background-color: #414141;
     --text-color: #525252;
     --accent-color: #906272;
@@ -257,6 +257,74 @@ nav {
     grid-row: 1/3;
 }
 
+/* Contact Section */
+#contact {
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper {
+    flex: 3 1 40rem;
+}
+
+.form-wrapper h2 {
+    margin: 5rem;
+}
+
+.form-wrapper span {
+    font-size: var(--big-text);
+    color: var(--accent-color);
+}
+
+.form-wrapper label {
+    display: block;
+}
+
+.form-wrapper input {
+    display: block;
+    margin: 3rem 0;
+    background-color: var(--background-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+}
+
+.form-wrapper button {
+    padding: 1rem 8rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+#contact img {
+    flex: 3 1 40rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-color);
+    color: white;
+    display: flex;
+    padding: 3rem 5%;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+footer ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h4 {
+    flex: 3 1 40rem;
+    font-size: calc(1.4rem + 1vw);
+}
+
 /* Keyframes */
 @keyframes opening {
     from {
@@ -286,6 +354,13 @@ nav {
 }
 
 /* Media Queries */
+@media screen and (max-width: 1050px) {
+    /* Contact Section */
+    #contact img {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 842px) {
     /* Global */
     html {
@@ -383,5 +458,26 @@ nav {
     #gallery img {
         grid-row: auto;
         grid-column: auto;
+    }
+
+    footer ul {
+        order: 1;
+    }
+
+    footer h4 {
+        order: 2;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    html {
+        --header1: 3rem;
+        --header2: 5rem;
+        --header3: 4rem;
+        --header4: 3rem;
+        --text: 2.7rem;
+        --big-text: 8rem;
     }
 }
