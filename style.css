@@ -110,7 +110,7 @@ nav {
     flex: 1 1 20rem;
 }
 
-.burger, .menu-check {
+.burger{
     display: none;
 }
 
@@ -408,37 +408,23 @@ footer h4 {
         text-decoration: underline;
     }
 
-    .menu-check {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 5%;
-        transform: translate(5%, -50%);
-        width: 5rem;
-        height: 5rem;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 10;
-    }
 
-    .menu-check:checked + .nav-links {
+    .nav-open {
         transform: translate(-100%);
     }
 
-    .menu-check:checked ~ .burger span {
+    .toggle .line1 {
+        transform: rotateZ(45deg) translateY(300%);
         background-color: white;
     }
 
-    .menu-check:checked ~ .burger span:nth-child(1) {
-        transform: rotateZ(45deg) translateY(300%);
-    }
-
-    .menu-check:checked ~ .burger span:nth-child(2) {
+    .toggle .line2 {
         opacity: 0;
     }
 
-    .menu-check:checked ~ .burger span:nth-child(3) {
+    .toggle .line3 {
         transform: rotateZ(-45deg) translateY(-300%);
+        background-color: white;
     }
 
     /* About Section */
