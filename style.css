@@ -23,7 +23,7 @@
 
 
 html{
-    font-size: 67.5%;
+    font-size: 62.5%;
     scroll-behavior: smooth;
     --header1: calc(2rem + 1vw);
     --header2: calc(3.5rem + 1vw);
